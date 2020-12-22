@@ -1,0 +1,16 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %} Are You Healthy?? {% endblock %}
+
+{% block body %}
+<br>
+<div class="alert alert-success container my-5" role="alert">
+    <h4 class="alert-heading">{{Title}}</h4>
+    <p>{{Desc}}</p>
+    <hr>
+    <p class="mb-0"></p>
+    <a href="{% url 'PredictionPage' %}" class="btn btn-primary ">Make Another Prediction</a>
+</div>
+{% endblock %}
+{% block script %}
+{% endblock %}

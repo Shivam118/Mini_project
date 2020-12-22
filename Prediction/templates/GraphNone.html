@@ -1,0 +1,126 @@
+{% extends 'basic.html' %}
+{% load static%}
+{% block title%} Graphical Values {% endblock %}
+{% block css%}
+<link href="../static/css/graph.css" rel="stylesheet">
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .nav-link:hover {
+        border-bottom: 2px solid #bd2130;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    .chartdash {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../static/Files/chartdash2.gif');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: 95vw;
+        ;
+    }
+
+    .NoneBanner {
+        background: #ffffd1;
+        border-radius: 15px;
+        border: 3px solid #ffff8f;
+        box-shadow: inlet;
+        box-shadow: 10px 10px 70px #ffff8f inset;
+    }
+</style>
+{% endblock %}
+{% block body%}
+<br>
+<div class="jumbotron chartdash">
+    <h1 class="text-center mt-5 text-light">Chart Board</h1>
+</div>
+<hr width="90%" />
+<section class="mt-5 container">
+    <form action="/Graph/" class="">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                <label for="country" class="mt-1" style="float:left;">Country&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <select class="custom-select d-block w-50" id="country" required style="float:left;" name="country">
+                    <option value="angola">Angola</option>
+                    <option value="bangladesh">Bangladesh</option>
+                    <option value="bhutan">Bhutan</option>
+                    <option value="bolivia">Bolivia</option>
+                    <option value="caboverde">Cabo Verde</option>
+                    <option value="cambodia">Cambodia</option>
+                    <option value="cameroon">Cameroon</option>
+                    <option value="djibouti">Djibouti</option>
+                    <option value="egypt">Egypt</option>
+                    <option value="elsalvador">El Salvador</option>
+                    <option value="eswatini">Eswatini</option>
+                    <option value="georgia">Georgia</option>
+                    <option value="ghana">Ghana</option>
+                    <option value="india" selected>India</option>
+                    <option value="indonesia">Indonesia</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="kiribati">Kiribati</option>
+                    <option value="lesotho">Lesotho</option>
+                    <option value="mauritania">Mauritania</option>
+                    <option value="micronesia">Micronesia</option>
+                    <option value="moldova">Moldova</option>
+                    <option value="mongolia">Mongolia</option>
+                    <option value="myanmar">Myanmar</option>
+                    <option value="nigeria">Nigeria</option>
+                    <option value="pakistan">Pakistan</option>
+                    <option value="papuanewguinea">Papua New Guinea</option>
+                    <option value="phillipines">Phillipines</option>
+                    <option value="srilanka">Sri Lanka</option>
+                    <option value="sudan">Sudan</option>
+                    <option value="tunisia">Tunisia</option>
+                    <option value="ukraine">Ukraine</option>
+                    <option value="uzbekistan">Uzbekistan</option>
+                    <option value="vanuata">Vanuata</option>
+                    <option value="vietnam">Vietnam</option>
+                    <option value="zambia">Zambia</option>
+                </select>
+            </div>
+            <div class="custom-control custom-checkbox col-lg-4 col-md-4 col-sm-4 col-6 mt-1">
+                <input type="checkbox" class="custom-control-input" id="death_rate" name="death_rate">
+                <label class="custom-control-label" for="death_rate">Death Rate</label>
+            </div>
+            <div class="custom-control custom-checkbox col-lg-4 col-md-4 col-sm-4 col-6 mt-1">
+                <input type="checkbox" class="custom-control-input" id="growth_rate" name="growth_rate">
+                <label class="custom-control-label" for="growth_rate">Growth Rate</label>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-6 mt-1"></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-6 mt-1">
+                <button type="submit" class="btn btn-sm btn-block btn-secondary" id="plotSubmit">Search</button>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-6 mt-1"></div>
+        </div>
+    </form>
+</section>
+<br>
+<hr width="90%" />
+<br>
+<div class="m-5 alert alert-danger" role="alert">
+    <div class="container">
+        <img src="{%static 'Files/WARNING.png'%}" height="100vh" style="display:block; margin:auto;">   
+        <br>
+        <h1 class="alert-heading" style="display:block; text-align:center;">Please Choose a Country</h1>
+        <br><br>
+        <p class="lead">
+            <a class="btn btn-success btn-md" style="position:relative; left:44.5%;" href="/" role="button">Back to HOME</a>
+        </p>
+    </div>
+</div>
+{% block script%} {% endblock %}
+{% endblock %}

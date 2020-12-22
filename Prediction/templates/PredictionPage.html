@@ -1,0 +1,204 @@
+{% extends 'basic.html'%}
+{% load static %}
+{% block title %} Check {% endblock %}
+{% block css %} 
+<!-- CSS -->
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+</style>
+{% endblock %}
+
+{% block body %} 
+<!-- body -->
+<div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Site</strong> is still under Progress.
+  </div>
+<!-- Prediction Form -->
+<section class="container-fluid mt-5 mb-5">
+    <div class="display-1 text-center">It's Time <text class="text-primary">to</text> Check!</div>
+    <div class="display-4 text-center">Is Your <text class="text-danger">Heart</text> <text
+            class="text-success">Healthy</text> ?</div>
+    <br><br><br>
+    <form action="{%url 'PredictionOut'%}" class="">
+        <div class="form-group row">
+            <div class="col-lg-1 col-md-1 col-sm-1">
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10">
+                <!-- Name & AGE-->
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <label for="name" style="font-size:20px;">NAME :</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <label for="age" style="font-size:20px;">AGE :</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <input type="number" class="form-control" id="age" name='age' required>
+                    </div>
+                </div>
+                <br>
+                <!--GENDER-->
+                <div class="radio row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <label style="font-size:20px;">GENDER :</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <select class="custom-select" required id="gender" name="gender">
+                            <option value="m_gender" selected>Male</option>
+                            <option value="f_gender">Female</option>
+                        </select>
+                    </div>
+                    <!-- <div class="col-lg-3 col-md-3 col-sm-3">
+                    <input type="radio" class="radio-inline" id="male" name="gender">
+                    <label style="font-size:20px;" for="male" name='m_gender'>Male</label>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <input type="radio" class="radio-inline" id="female" name="gender">
+                    <label style="font-size:20px;" for="female" name='f_gender'>Female</label>
+                </div> -->
+                </div>
+                <br>
+                <!--Height & Weight-->
+                <div class="row">
+                    <!-- <div class="col-lg-3 col-md-3 col-sm-3"></div> -->
+                    <div class="col-lg-6 col-sm-6 col-md-6">
+                        <!--HEIGHT-->
+                        <label for="height" style="font-size:20px;">Height</label>
+                        <input type="number" class="form-control" id="height" name='height' required>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-md-6">
+                        <!--WEIGHT-->
+                        <label for="weight" style="font-size:20px;">Weight</label>
+                        <input type="number" class="form-control" id="weight" name='weight' required>
+                    </div>
+                </div>
+                <br>
+                <!--Blood Pressure-->
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <!--AP_HI-->
+                        <label for="ap_hi" style="font-size:20px;">Systolic blood pressure</label>
+                        <input type="number" class="form-control" id="ap_hi" name='ap_hi' required>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <!--AP_LO-->
+                        <label for="ap_lo" style="font-size:20px;">Diastolic blood pressure</label>
+                        <input type="number" class="form-control" id="ap_lo" name='ap_lo' required>
+                    </div>
+                </div>
+                <br>
+                <!--CHOLESTROL-->
+                <div class="radio row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <label style="font-size:20px;">Cholestrol :</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <select class="custom-select" required id="chol" name="chol">
+                            <option value="n_chol" selected >Normal</option>
+                            <option value="an_chol">Above Normal</option>
+                            <option value="wan_chol">Well Above Normal</option>
+                        </select>
+                    </div>
+                    <!-- <div class="col-lg-2 col-md-2 col-sm-2">
+                    <input type="radio" class="radio-inline" id="normal_chol" required name="cholestrol">
+                    <label for="normal_chol">Normal</label>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <input type="radio" class="radio-inline" id="ab_normal_chol" required name="cholestrol">
+                    <label for="ab_normal_chol">Above Normal</label>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <input type="radio" class="radio-inline" id="well_ab_normal_chol" required name="cholestrol">
+                    <label for="well_ab_normal_chol">Well Above Normal</label>
+                </div> -->
+                </div>
+                <br>
+                <!--GLUCOSE-->
+                <div class="radio row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <label style="font-size:20px;">Glucose :</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <select class="custom-select" required id="glucose" name="glucose">
+                            <option value="n_glu" selected>Normal</option>
+                            <option value="an_glu">Above Normal</option>
+                            <option value="wan_glu">Well Above Normal</option>
+                        </select>
+                    </div>
+                    <!-- <div class="col-lg-2 col-md-2 col-sm-2">
+                    <input type="radio" class="radio-inline" id="normal_glu" required name="glucose">
+                    <label for="normal_glu">Normal</label>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <input type="radio" class="radio-inline" id="ab_normal_glu" required name="glucose">
+                    <label for="ab_normal_glu">Above Normal</label>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <input type="radio" class="radio-inline" id="well_ab_normal_glu" required name="glucose">
+                    <label for="well_ab_normal_glu">Well Above Normal</label>
+                </div> -->
+                </div>
+                <br>
+                <!--SMOKE-->
+                <div class="radio row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <label style="font-size:20px;">Smoke :</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <select class="custom-select" required id="smoke" name="smoke">
+                            <option value="yes_smoke">Yes</option>
+                            <option value="no_smoke" selected>No</option>
+                        </select>
+                    </div>
+                    <!-- <div class="col-lg-3 col-md-3 col-sm-3">
+                    <input type="radio" class="radio-inline" id="yes_smoke" required name="smoke">
+                    <label for="yes_smoke">Yes</label>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <input type="radio" class="radio-inline" id="no_smoke" required name="smoke">
+                    <label for="no_smoke">No</label>
+                </div> -->
+                </div>
+                <br>
+                <!--ALCOHOL-->
+                <div class="radio row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <label style="font-size:20px;">Alcohol :</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <select class="custom-select" required id="alcohol" name="alcohol">
+                            <option value="yes_alco">Yes</option>
+                            <option value="no_alco" selected>No</option>
+                        </select>
+                    </div>
+
+                    <!-- <div class="col-lg-3 col-md-3 col-sm-3">
+                    <input type="radio" class="radio-inline" id="yes_alco" required name="alcohol">
+                    <label for="yes_alco">Yes</label>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <input type="radio" class="radio-inline" id="no_alco" required name="alcohol">
+                    <label for="no_alco">No</label>
+                </div> -->
+                </div>
+                <br><br>
+                <input type="submit" id="check_disease" class="btn btn-block btn-lg btn-danger" value="Check">
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1">
+            </div>
+        </div>
+    </form>
+</section>
+{% endblock %}
+{% block script %} <!-- JS -->{% endblock %}
