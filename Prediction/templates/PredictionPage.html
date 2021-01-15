@@ -59,28 +59,19 @@
                             <option value="f_gender">Female</option>
                         </select>
                     </div>
-                    <!-- <div class="col-lg-3 col-md-3 col-sm-3">
-                    <input type="radio" class="radio-inline" id="male" name="gender">
-                    <label style="font-size:20px;" for="male" name='m_gender'>Male</label>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3">
-                    <input type="radio" class="radio-inline" id="female" name="gender">
-                    <label style="font-size:20px;" for="female" name='f_gender'>Female</label>
-                </div> -->
                 </div>
                 <br>
                 <!--Height & Weight-->
                 <div class="row">
-                    <!-- <div class="col-lg-3 col-md-3 col-sm-3"></div> -->
                     <div class="col-lg-6 col-sm-6 col-md-6">
                         <!--HEIGHT-->
                         <label for="height" style="font-size:20px;">Height</label>
-                        <input type="number" class="form-control" id="height" name='height' required>
+                        <input type="number" class="form-control" id="height" name='height' placeholder="(in cm)" required>
                     </div>
                     <div class="col-lg-6 col-sm-6 col-md-6">
                         <!--WEIGHT-->
                         <label for="weight" style="font-size:20px;">Weight</label>
-                        <input type="number" class="form-control" id="weight" name='weight' required>
+                        <input type="number" class="form-control" id="weight" name='weight' placeholder="(in kg)" required>
                     </div>
                 </div>
                 <br>
@@ -89,12 +80,12 @@
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <!--AP_HI-->
                         <label for="ap_hi" style="font-size:20px;">Systolic blood pressure</label>
-                        <input type="number" class="form-control" id="ap_hi" name='ap_hi' required>
+                        <input type="number" class="form-control" id="ap_hi" name='ap_hi' placeholder="" required>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <!--AP_LO-->
                         <label for="ap_lo" style="font-size:20px;">Diastolic blood pressure</label>
-                        <input type="number" class="form-control" id="ap_lo" name='ap_lo' required>
+                        <input type="number" class="form-control" id="ap_lo" name='ap_lo' placeholder="" required>
                     </div>
                 </div>
                 <br>
@@ -105,23 +96,11 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <select class="custom-select" required id="chol" name="chol">
-                            <option value="n_chol" selected >Normal</option>
-                            <option value="an_chol">Above Normal</option>
-                            <option value="wan_chol">Well Above Normal</option>
+                            <option value="n_chol" selected >Normal [45-200]</option>
+                            <option value="an_chol">Above Normal [200-239]</option>
+                            <option value="wan_chol">Well Above Normal [&#60;240]</option>
                         </select>
                     </div>
-                    <!-- <div class="col-lg-2 col-md-2 col-sm-2">
-                    <input type="radio" class="radio-inline" id="normal_chol" required name="cholestrol">
-                    <label for="normal_chol">Normal</label>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-2">
-                    <input type="radio" class="radio-inline" id="ab_normal_chol" required name="cholestrol">
-                    <label for="ab_normal_chol">Above Normal</label>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-2">
-                    <input type="radio" class="radio-inline" id="well_ab_normal_chol" required name="cholestrol">
-                    <label for="well_ab_normal_chol">Well Above Normal</label>
-                </div> -->
                 </div>
                 <br>
                 <!--GLUCOSE-->
@@ -131,23 +110,11 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <select class="custom-select" required id="glucose" name="glucose">
-                            <option value="n_glu" selected>Normal</option>
-                            <option value="an_glu">Above Normal</option>
-                            <option value="wan_glu">Well Above Normal</option>
+                            <option value="n_glu" selected>Normal [70-100 mg/dl]</option>
+                            <option value="an_glu">Above Normal [100-125 mg/dl]</option>
+                            <option value="wan_glu">Well Above Normal [&#60;126 mg/dl]</option>
                         </select>
                     </div>
-                    <!-- <div class="col-lg-2 col-md-2 col-sm-2">
-                    <input type="radio" class="radio-inline" id="normal_glu" required name="glucose">
-                    <label for="normal_glu">Normal</label>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-2">
-                    <input type="radio" class="radio-inline" id="ab_normal_glu" required name="glucose">
-                    <label for="ab_normal_glu">Above Normal</label>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-2">
-                    <input type="radio" class="radio-inline" id="well_ab_normal_glu" required name="glucose">
-                    <label for="well_ab_normal_glu">Well Above Normal</label>
-                </div> -->
                 </div>
                 <br>
                 <!--SMOKE-->
@@ -161,14 +128,6 @@
                             <option value="no_smoke" selected>No</option>
                         </select>
                     </div>
-                    <!-- <div class="col-lg-3 col-md-3 col-sm-3">
-                    <input type="radio" class="radio-inline" id="yes_smoke" required name="smoke">
-                    <label for="yes_smoke">Yes</label>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3">
-                    <input type="radio" class="radio-inline" id="no_smoke" required name="smoke">
-                    <label for="no_smoke">No</label>
-                </div> -->
                 </div>
                 <br>
                 <!--ALCOHOL-->
@@ -182,15 +141,6 @@
                             <option value="no_alco" selected>No</option>
                         </select>
                     </div>
-
-                    <!-- <div class="col-lg-3 col-md-3 col-sm-3">
-                    <input type="radio" class="radio-inline" id="yes_alco" required name="alcohol">
-                    <label for="yes_alco">Yes</label>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3">
-                    <input type="radio" class="radio-inline" id="no_alco" required name="alcohol">
-                    <label for="no_alco">No</label>
-                </div> -->
                 </div>
                 <br><br>
                 <input type="submit" id="check_disease" class="btn btn-block btn-lg btn-danger" value="Check">
