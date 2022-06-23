@@ -6,3 +6,4 @@ numpy
 pandas
 joblib
 python-dotenv
+django_heroku
