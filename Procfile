@@ -1,1 +1,1 @@
-web: python manage.py runserver
+web: gunicorn zure-mini-project.wsgi
