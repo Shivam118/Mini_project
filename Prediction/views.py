@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
